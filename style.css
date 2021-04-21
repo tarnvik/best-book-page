@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+:root {
+  --blue: #b7c6d7;
+  --orange: #dc7c59;
+  --almost-white: #fcfaf8;
+}
+
+nav {
+  background-color: var(--blue);
+  padding: 2vw;
+}
+
+main {
+  margin: 1rem;
+}
+
+footer {
+  background-color: var(--orange);
+  padding: 2vw;
+}
+
+ul {
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.space-around {
+  justify-content: space-around;
+}
