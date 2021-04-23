@@ -29,10 +29,42 @@ ul {
   list-style: none;
 }
 
+.hide {
+  display: none;
+}
+
 .flex {
   display: flex;
 }
 
 .space-around {
   justify-content: space-around;
+}
+
+.big {
+  font-size: 2rem;
+}
+
+.bigger {
+  font-size: 3rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.main {
+  grid-template: auto / 2.5fr 1fr;
+}
+
+.section {
+  grid-template: auto / 1fr 1fr;
+}
+
+.title {
+  grid-column: 1 / 3;
+}
+
+.currently-reading {
+  grid-area: 2 / 2 / 4 / 3;
 }

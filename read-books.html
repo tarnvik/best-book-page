@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
+    <script defer src="main.js"></script>
     <title>Book thing</title>
 </head>
 
@@ -19,21 +20,23 @@
             <a href="tbr.html">To Be Read</a>
         </nav>
     </header>
-    <main>
-        <h1>All the books I have read</h1>
+    <main class="grid main">
+        <h1 class="bigger title">All the books I have read</h1>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto laboriosam itaque dolore voluptatem eos.
             Pariatur repudiandae unde, ea architecto qui, exercitationem facilis voluptatibus similique corporis minus
-            corrupti esse neque adipisci!</p>
+            corrupti esse neque adipisci! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas veritatis
+            ratione quis deleniti aspernatur officia dolorum voluptate et incidunt iste laborum non provident, rem
+            laudantium sed. Laborum aliquam praesentium natus.</p>
 
-        <article>
-            <h2>Currently reading</h2>
-            <p>SOME FANCY LAYOUT THING HERE</p>
+        <article class="currently-reading">
+            <h2 class="big">Currently reading</h2>
+            <img src="https://picsum.photos/200/300" alt="">
         </article>
 
-        <section>
+        <section class="grid section">
             <article>
-                <h2>2021</h2>
-                <div>
+                <h2 id="btn-2021">2021</h2>
+                <div id="read-books-2021">
                     <ul>
                         <li>Book title 1</li>
                         <li>Book title 2</li>
@@ -44,8 +47,8 @@
                 </div>
             </article>
             <article>
-                <h2>2020</h2>
-                <div>
+                <h2 id="btn-2020">2020</h2>
+                <div class="hide" id="read-books-2020">
                     <ul>
                         <li>Book title 1</li>
                         <li>Book title 2</li>
@@ -56,7 +59,6 @@
                 </div>
             </article>
         </section>
-
     </main>
     <footer>
         <p>Footer things will be here</p>
