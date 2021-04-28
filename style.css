@@ -37,6 +37,10 @@ ul {
   display: flex;
 }
 
+.row {
+  flex-direction: row;
+}
+
 .space-around {
   justify-content: space-around;
 }
@@ -49,6 +53,10 @@ ul {
   font-size: 3rem;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .grid {
   display: grid;
 }
@@ -58,7 +66,11 @@ ul {
 }
 
 .section {
-  grid-template: auto / 1fr 1fr;
+  grid-template: auto / 5rem 1fr;
+}
+
+.book-list{
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .title {
@@ -68,3 +80,17 @@ ul {
 .currently-reading {
   grid-area: 2 / 2 / 4 / 3;
 }
+
+.rotate {
+  transform: rotate(-90deg);
+}
+
+#btn-2022 {
+  grid-area: 1 / 2 / 3 / 2;
+}
+
+#read-books-2020,
+#read-books-2021 {
+  grid-area: 2 / 1 / 3 / 3;
+}
+
