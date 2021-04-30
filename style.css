@@ -69,8 +69,42 @@ ul {
   grid-template: auto / 5rem 1fr;
 }
 
-.book-list{
+.book-list {
   grid-template-columns: repeat(5, 1fr);
+}
+
+.reviews-main {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.book-tile {
+  grid-template: 1rem 1rem 3rem / auto 1fr 1fr;
+  padding-bottom: 1rem;
+}
+
+.span-3 {
+  grid-column: span 3;
+}
+
+.book-tile-title {
+  grid-area: 1 / 2 / 2 / 4;
+}
+
+.book-tile-author {
+  grid-area: 2 / 2 / 3 / 4;
+}
+
+.book-tile-img {
+  grid-area: 1 / 1 / 6 / 2;
+}
+
+.book-tile-buy,
+.book-tile-library {
+  grid-column: span 2;
+}
+
+.book-tile-review {
+  grid-column: span 3;
 }
 
 .title {
@@ -93,4 +127,3 @@ ul {
 #read-books-2021 {
   grid-area: 2 / 1 / 3 / 3;
 }
-
