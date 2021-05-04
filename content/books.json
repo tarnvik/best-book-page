@@ -1,0 +1,49 @@
+[
+  {
+    "title": "One of us is lying",
+    "author": "Karen M. McManu",
+    "pages": 358,
+    "score": 5,
+    "read": [true, 2021],
+    "review": true,
+    "library": [true, "https://biblioteket.stockholm.se/titel/1064844"],
+    "store": [
+      "akademibokhandeln",
+      "https://www.akademibokhandeln.se/bok/one-of-us-is-lying/9781524764722/"
+    ],
+    "img": "https://picsum.photos/150/220",
+    "id": "one-of-us-is-lying"
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "read": [true, 2021],
+    "review": true,
+    "library": [true, "https://biblioteket.stockholm.se/titel/1064844"],
+    "store": [
+      "akademibokhandeln",
+      "https://www.akademibokhandeln.se/bok/one-of-us-is-lying/9781524764722/"
+    ],
+    "img": "https://picsum.photos/150/220",
+    "id": "book-1984"
+  },
+  {
+    "title": "One of us is next",
+    "author": "Karen M. McManu",
+    "read": [false, "currently reading"],
+    "img": "https://picsum.photos/200/300"
+  },
+  {
+    "title": "We were liars",
+    "author": "E. Lockheart",
+    "read": [true, 2020],
+    "review": true,
+    "library": [true, "https://biblioteket.stockholm.se/titel/1064844"],
+    "store": [
+      "akademibokhandeln",
+      "https://www.akademibokhandeln.se/bok/one-of-us-is-lying/9781524764722/"
+    ],
+    "img": "https://picsum.photos/150/220",
+    "id": "we-were-liars"
+  }
+]
