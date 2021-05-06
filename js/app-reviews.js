@@ -1,3 +1,14 @@
+"use strict";
+
+const LOCAL_STORAGE_KEY_TBRS = "tbrs";
+
+
+let tbrs = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY_TBRS)) || [];
+
+function saveList() {
+  localStorage.setItem(LOCAL_STORAGE_KEY_TBRS, JSON.stringify(tbrs));
+}
+
 function createItem(ElementType, innerText) {
   let item = document.createElement(ElementType);
   item.innerText = innerText;
@@ -59,6 +70,19 @@ fetch("./content/books.json", {})
         }
         let purchase = createItem("a", "Buy (" + book.store[0] + ")");
         purchase.setAttribute("href", book.store[1]);
+        let addToTbr = createItem("button", "+");
+        addToTbr.addEventListener("click", () => {
+          let bookAlreadyAdded = false;
+          tbrs.forEach((item) => {
+            if (item.id === book.id) {
+              bookAlreadyAdded = true;
+            }
+          });
+          if (!bookAlreadyAdded) {
+            tbrs.push(book);
+            saveList();
+          }
+        });
         let review = createItem("p", shortReview);
         let toggleReview = createItem("a", "Show More");
         toggleReview.setAttribute("href", "#" + book.id);
@@ -71,6 +95,7 @@ fetch("./content/books.json", {})
           score,
           library,
           purchase,
+          addToTbr,
           review,
           toggleReview
         );

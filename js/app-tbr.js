@@ -57,8 +57,16 @@ fetch("./content/books.json", {})
         let status = createItem("p", book.status);
         let addToTbr = createItem("button", "+");
         addToTbr.addEventListener("click", () => {
-          tbrs.push(book);
-          updateList();
+          let bookAlreadyAdded = false;
+          tbrs.forEach((item) => {
+            if (item.id === book.id) {
+              bookAlreadyAdded = true;
+            }
+          });
+          if (!bookAlreadyAdded) {
+            tbrs.push(book);
+            updateList();
+          }
         });
         listItem.append(title, author, status, addToTbr);
         document.querySelector("#app-root").append(listItem);

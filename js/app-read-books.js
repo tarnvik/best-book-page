@@ -1,5 +1,15 @@
+"use strict";
+
+const LOCAL_STORAGE_KEY_TBRS = "tbrs";
+
 let readBooks2021 = document.querySelector("#read-books-2021");
 let readBooks2020 = document.querySelector("#read-books-2020");
+
+let tbrs = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY_TBRS)) || [];
+
+function saveList() {
+  localStorage.setItem(LOCAL_STORAGE_KEY_TBRS, JSON.stringify(tbrs));
+}
 
 function hide(hide, show) {
   hide.classList.add("hide");
@@ -14,25 +24,38 @@ document.querySelector("#btn-2021").addEventListener("click", () => {
   hide(readBooks2020, readBooks2021);
 });
 
+function createItem(ElementType, innerText) {
+  let item = document.createElement(ElementType);
+  item.innerText = innerText;
+  return item;
+}
+
 function createListItem(book) {
   let listItem = document.createElement("li");
   listItem.classList.add("grid", "book-list");
-  let titleLink = document.createElement("a");
+  let titleLink = createItem("a", book.title);
   titleLink.setAttribute("href", "reviews.html#" + book.id);
-  titleLink.innerText = book.title;
-  let author = document.createElement("p");
-  author.innerText = book.author;
-  let pages = document.createElement("p");
-  pages.innerText = book.pages;
-  let score = document.createElement("p");
-  score.innerText = book.score + "/5";
-  let addToTbr = document.createElement("button");
-  addToTbr.innerText = "+";
+  let author = createItem("p", book.author);
+  let pages = createItem("p", book.pages);
+  let score = createItem("p", book.score + "/5");
+  let addToTbr = createItem("button", "+");
+  addToTbr.addEventListener("click", () => {
+    let bookAlreadyAdded = false;
+    tbrs.forEach((item) => {
+      if (item.id === book.id) {
+        bookAlreadyAdded = true;
+      }
+    });
+    if (!bookAlreadyAdded) {
+      tbrs.push(book);
+      saveList();
+    }
+  });
   listItem.append(titleLink, author, pages, score, addToTbr);
   return listItem;
 }
 
-fetch("./books.json", {})
+fetch("./content/books.json", {})
   .then((response) => {
     console.log(response);
     return response.json();
