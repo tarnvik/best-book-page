@@ -70,11 +70,23 @@ ul {
 }
 
 .book-list {
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: 2fr 2fr 1fr 1fr 1.5fr
 }
 
 .reviews-main {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.tbr-list {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.tbr-main {
+  grid-template-columns: 1fr 1fr;
+}
+
+.tbr-title {
+  grid-column: span 2;
 }
 
 .book-tile {
