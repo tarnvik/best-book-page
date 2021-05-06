@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
+    <script defer src="js/app-tbr.js"></script>
     <title>Book thing</title>
 </head>
 
@@ -19,7 +20,32 @@
             <a href="tbr.html">To Be Read</a>
         </nav>
     </header>
-    <main>
+    <main class="grid tbr-main">
+        <h1 class="tbr-title">To Be Read</h1>
+        <h2>My TBR</h2>
+        <h2>Your TBR</h2>
+        <section>
+            <ul id="app-root">
+                <li class="grid tbr-list">
+                    <p class="bold">Title</p>
+                    <p class="bold">Author</p>
+                    <p class="bold">Status</p>
+                    <p class="bold">Add to TBR</p>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <ul>
+                <li class="grid book-list">
+                    <p class="bold">Title</p>
+                    <p class="bold">Author</p>
+                    <p class="bold">Purchase</p>
+                    <p class="bold">Library</p>
+                    <p class="bold">Add to TBR</p>
+                </li>
+            </ul>
+            <div id="tbr-app-root"></div>
+        </section>
     </main>
     <footer>
         <p>Footer things will be here</p>
