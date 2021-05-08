@@ -2,7 +2,6 @@
 
 const LOCAL_STORAGE_KEY_TBRS = "tbrs";
 
-
 let tbrs = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY_TBRS)) || [];
 
 function saveList() {
@@ -55,12 +54,17 @@ fetch("./content/books.json", {})
       if (book.review) {
         let article = document.createElement("article");
         article.setAttribute("id", book.id);
+        article.classList.add("review", "grid");
         let bookCover = document.createElement("img");
         bookCover.setAttribute("src", book.img);
+        bookCover.classList.add("review-img");
         let title = createItem("h2", book.title);
         let author = createItem("p", book.author);
-        let pages = createItem("p", book.pages);
+        let div = document.createElement("div");
+        div.classList.add("flex", "around");
+        let pages = createItem("p", "Pages: " + book.pages);
         let score = createItem("p", book.score + "/5");
+        div.append(pages, score);
         let library;
         if (book.library[0]) {
           library = createItem("a", "Library (Stockholm)");
@@ -70,6 +74,7 @@ fetch("./content/books.json", {})
         }
         let purchase = createItem("a", "Buy (" + book.store[0] + ")");
         purchase.setAttribute("href", book.store[1]);
+        let addToTbrText = createItem("p", "Add to TBR: ");
         let addToTbr = createItem("button", "+");
         addToTbr.addEventListener("click", () => {
           let bookAlreadyAdded = false;
@@ -84,6 +89,7 @@ fetch("./content/books.json", {})
           }
         });
         let review = createItem("p", shortReview);
+        review.classList.add("span-2");
         let toggleReview = createItem("a", "Show More");
         toggleReview.setAttribute("href", "#" + book.id);
         let reviewIsShort = true;
@@ -91,10 +97,10 @@ fetch("./content/books.json", {})
           bookCover,
           title,
           author,
-          pages,
-          score,
+          div,
           library,
           purchase,
+          addToTbrText,
           addToTbr,
           review,
           toggleReview
@@ -109,7 +115,7 @@ fetch("./content/books.json", {})
             review.innerText = shortReview;
             reviewIsShort = true;
           }
-          article.classList.toggle("span-3");
+          article.classList.toggle("span-end");
         });
         document.querySelector("#app-root").append(article);
       }
