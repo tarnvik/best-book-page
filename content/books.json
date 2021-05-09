@@ -1,66 +1,205 @@
 [
   {
     "title": "One of us is lying",
-    "author": "Karen M. McManu",
+    "author": "Karen M. McManus",
     "pages": 358,
     "score": 5,
     "read": [true, 2021],
     "review": true,
     "library": [true, "https://biblioteket.stockholm.se/titel/1064844"],
     "store": [
-      "akademibokhandeln",
-      "https://www.akademibokhandeln.se/bok/one-of-us-is-lying/9781524764722/"
+      "Adlibris",
+      "https://www.adlibris.com/se/bok/one-of-us-is-lying-9780141375632"
     ],
-    "img": "https://picsum.photos/150/220",
+    "img": "img/one-of-us-is-lying.jpg",
     "id": "one-of-us-is-lying"
   },
   {
     "title": "1984",
     "author": "George Orwell",
+    "pages": 240,
+    "score": 2,
     "read": [true, 2021],
     "review": true,
-    "library": [true, "https://biblioteket.stockholm.se/titel/1064844"],
-    "store": [
-      "akademibokhandeln",
-      "https://www.akademibokhandeln.se/bok/one-of-us-is-lying/9781524764722/"
-    ],
-    "img": "https://picsum.photos/150/220",
+    "library": [true, "https://biblioteket.stockholm.se/titel/155557"],
+    "store": ["Adlibris", "https://www.adlibris.com/se/bok/1984-9780141036144"],
+    "img": "img/1984.jpg",
     "id": "book-1984"
   },
   {
     "title": "One of us is next",
     "author": "Karen M. McManus",
     "read": [false, "currently reading"],
-    "img": "https://picsum.photos/200/300"
+    "img": "img/one-of-us-is-lying.jpg"
   },
   {
-    "title": "We were liars",
+    "title": "We Were Liars",
     "author": "E. Lockheart",
+    "pages": 225,
+    "score": 1,
     "read": [true, 2020],
     "review": true,
-    "library": [true, "https://biblioteket.stockholm.se/titel/1064844"],
+    "library": [true, "https://biblioteket.stockholm.se/titel/348793"],
     "store": [
-      "akademibokhandeln",
-      "https://www.akademibokhandeln.se/bok/one-of-us-is-lying/9781524764722/"
+      "Adlibris",
+      "https://www.adlibris.com/se/bok/we-were-liars-9781471403989"
     ],
-    "img": "https://picsum.photos/150/220",
+    "img": "img/we-were-liars.jpg",
     "id": "we-were-liars"
   },
   {
-    "title": "One of us is lying",
-    "author": "Karen M. McManus",
-    "pages": 358,
-    "score": 5,
-    "read": false,
+    "title": "Children of Blood and Bone",
+    "author": "Tomi Adeyemi",
+    "pages": 525,
+    "score": 4,
+    "read": [true, 2020],
     "review": true,
-    "library": [true, "https://biblioteket.stockholm.se/titel/1064844"],
+    "library": [true, "https://biblioteket.stockholm.se/titel/1092137"],
     "store": [
-      "akademibokhandeln",
-      "https://www.akademibokhandeln.se/bok/one-of-us-is-lying/9781524764722/"
+      "Adlibris",
+      "https://www.adlibris.com/se/bok/children-of-blood-and-bone-solstenen-9789187879548"
     ],
-    "img": "https://picsum.photos/150/220",
-    "id": "not-read",
-    "status": "Reserved at library"
-
+    "img": "img/children-of-blood-and-bone.jpg",
+    "id": "children-of-blood-and-bone"
+  },
+  {
+    "title": "Crooked Kingdom",
+    "author": "Leigh Bardugo",
+    "pages": 536,
+    "score": 5,
+    "read": [true, 2020],
+    "review": true,
+    "library": [true, "https://biblioteket.stockholm.se/titel/1034990"],
+    "store": [
+      "Adlibris",
+      "https://www.adlibris.com/se/bok/crooked-kingdom-six-of-crows-book-2-9781780622316"
+    ],
+    "img": "img/crooked-kingdom.jpg",
+    "id": "crooked-kingdom"
+  },
+  {
+    "title": "Girl, Serpent, Thorn",
+    "author": "Melissa Bashardoust",
+    "pages": 311,
+    "score": 4,
+    "read": [true, 2020],
+    "review": true,
+    "library": [true, "https://biblioteket.stockholm.se/titel/1189551"],
+    "store": [
+      "Adlibris",
+      "https://www.adlibris.com/se/bok/girl-serpent-thorn-9781529379099"
+    ],
+    "img": "img/girl-serpent-thorn.jpg",
+    "id": "girl-serpent-thorn"
+  },
+  {
+    "title": "Shadow and Bone",
+    "author": "Leigh Bardugo",
+    "pages": 308,
+    "score": 4,
+    "read": [true, 2020],
+    "review": true,
+    "library": [true, "https://biblioteket.stockholm.se/titel/945430"],
+    "store": [
+      "Adlibris",
+      "https://www.adlibris.com/se/bok/shadow-and-bone-9781510105249"
+    ],
+    "img": "img/shadow-and-bone.jpg",
+    "id": "shadow-and-bone"
+  },
+  {
+    "title": "Six of Crows",
+    "author": "Leigh Bardugo",
+    "pages": 491,
+    "score": 5,
+    "read": [true, 2020],
+    "review": true,
+    "library": [true, "https://biblioteket.stockholm.se/titel/992677"],
+    "store": [
+      "Adlibris",
+      "https://www.adlibris.com/se/bok/six-of-crows-9781780622286"
+    ],
+    "img": "img/six-of-crows.jpg",
+    "id": "six-of-crows"
+  },
+  {
+    "title": "Spin the Dawn",
+    "author": "Elizabeth Lim",
+    "pages": 387,
+    "score": 4,
+    "read": [true, 2020],
+    "review": true,
+    "library": [true, "https://biblioteket.stockholm.se/titel/1144023"],
+    "store": [
+      "Adlibris",
+      "https://www.adlibris.com/se/bok/spin-the-dawn-9780593126028"
+    ],
+    "img": "img/spin-the-dawn.jpg",
+    "id": "spin-the-dawn"
+  },
+  {
+    "title": "A Game of Thrones",
+    "author": "George R. R. Martin",
+    "read": false,
+    "review": false,
+    "status": "Started reading",
+    "library": [true, "https://biblioteket.stockholm.se/titel/459756"],
+    "store": [
+      "Adlibris",
+      "https://www.adlibris.com/se/bok/a-game-of-thrones-a-song-of-ice-and-fire-book-one-9780553573404"
+    ],
+    "id": "a-game-of-thrones"
+  },
+  {
+    "title": "Dead Astronauts",
+    "author": "Jeff Vandermeer",
+    "read": false,
+    "review": false,
+    "status": "Have book",
+    "library": [true, "https://biblioteket.stockholm.se/titel/1162608"],
+    "store": [
+      "Adlibris",
+      "https://www.adlibris.com/se/bok/dead-astronauts-9780008375362"
+    ],
+    "id": "dead-astronauts"
+  },
+  {
+    "title": "The kinder poison",
+    "author": "Natalie Mae",
+    "read": false,
+    "review": false,
+    "status": "Will buy",
+    "library": false,
+    "store": [
+      "Adlibris",
+      "https://www.adlibris.com/se/bok/the-kinder-poison-9781984835222"
+    ],
+    "id": "the-kinder-poison"
+  },
+  {
+    "title": "Unravel the Dusk",
+    "author": "Elizabeth Lim",
+    "read": false,
+    "review": false,
+    "status": "Have book",
+    "library": [true, "https://biblioteket.stockholm.se/titel/1171538"],
+    "store": [
+      "Adlibris",
+      "https://www.adlibris.com/se/bok/unravel-the-dusk-9780525647027"
+    ],
+    "id": "unravel-the-dusk"
+  },
+  {
+    "title": "Simon Jimenez",
+    "author": "The Vanished Birds",
+    "read": false,
+    "review": false,
+    "status": "Have book",
+    "library": [true, "https://biblioteket.stockholm.se/titel/1180022"],
+    "store": [
+      "Adlibris",
+      "https://www.adlibris.com/se/bok/the-vanished-birds-9781789093926"
+    ],
+    "id": "the-vanished-birds"
   }
 ]
