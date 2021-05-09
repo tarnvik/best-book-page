@@ -57,25 +57,28 @@ fetch("./content/books.json", {})
         article.classList.add("review", "grid");
         let bookCover = document.createElement("img");
         bookCover.setAttribute("src", book.img);
-        bookCover.classList.add("review-img");
+        bookCover.setAttribute(
+          "alt",
+          book.title + " by " + book.author + " book cover"
+        );
         let title = createItem("h2", book.title);
+        title.classList.add("medium-text");
         let author = createItem("p", book.author);
-        let div = document.createElement("div");
-        div.classList.add("flex", "around");
         let pages = createItem("p", "Pages: " + book.pages);
-        let score = createItem("p", book.score + "/5");
-        div.append(pages, score);
+        let score = createItem("p", "Score: " + book.score + "/5");
         let library;
         if (book.library[0]) {
           library = createItem("a", "Library (Stockholm)");
           library.setAttribute("href", book.library[1]);
         } else {
-          library = createItem("p", "Not available");
+          library = createItem("p", "Library Not available");
         }
+        library.classList.add("button-text");
         let purchase = createItem("a", "Buy (" + book.store[0] + ")");
         purchase.setAttribute("href", book.store[1]);
-        let addToTbrText = createItem("p", "Add to TBR: ");
-        let addToTbr = createItem("button", "+");
+        purchase.classList.add("button-text");
+        let addToTbr = createItem("button", "Add to TBR");
+        addToTbr.classList.add("button-text");
         addToTbr.addEventListener("click", () => {
           let bookAlreadyAdded = false;
           tbrs.forEach((item) => {
@@ -89,18 +92,20 @@ fetch("./content/books.json", {})
           }
         });
         let review = createItem("p", shortReview);
+        review.classList.add("review-text");
         review.classList.add("span-2");
         let toggleReview = createItem("a", "Show More");
         toggleReview.setAttribute("href", "#" + book.id);
+        toggleReview.classList.add("medium-text");
         let reviewIsShort = true;
         article.append(
           bookCover,
           title,
           author,
-          div,
+          pages,
+          score,
           library,
           purchase,
-          addToTbrText,
           addToTbr,
           review,
           toggleReview
