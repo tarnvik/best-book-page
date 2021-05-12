@@ -22,49 +22,44 @@
             <a href="tbr.html" class="bigger-text">To Be Read</a>
         </nav>
     </header>
-    <main class="grid main">
-        <h1 class="bigger title">All the books I have read</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto laboriosam itaque dolore voluptatem eos.
-            Pariatur repudiandae unde, ea architecto qui, exercitationem facilis voluptatibus similique corporis minus
-            corrupti esse neque adipisci! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas veritatis
-            ratione quis deleniti aspernatur officia dolorum voluptate et incidunt iste laborum non provident, rem
-            laudantium sed. Laborum aliquam praesentium natus.</p>
-
-        <article class="currently-reading">
-            <h2 class="big">Currently reading</h2>
-            <div id="current-read-root"></div>
-        </article>
-        <section>
-            <section class="grid section">
-                <h2 id="btn-2021">2021</h2>
-                <div id="read-books-2021">
+    <main class="read-main">
+        <h1 class="title span-2">All the books I have read</h1>
+        <div class="flex between start">
+            <section class="grid read-books">
+                <h2 class="year-btn page-title" id="btn-2021">2021</h2>
+                <h2 class="year-btn page-title change-color" id="btn-2020">2020</h2>
+                <div id="read-books-2021" class="span-end">
                     <ul id="app-2021-root">
                         <li class="grid book-list">
-                            <p class="bold">Title (review link)</p>
-                            <p class="bold">Author</p>
-                            <p class="bold">Pages</p>
-                            <p class="bold">Score</p>
-                            <p class="bold">Add to TBR</p>
+                            <p class="medium-text">Title (review link)</p>
+                            <p class="medium-text">Author</p>
+                            <p class="medium-text">Pages</p>
+                            <p class="medium-text">Score</p>
+                            <p class="medium-text">Add to TBR</p>
                         </li>
                     </ul>
                 </div>
-                <h2 id="btn-2020">2020</h2>
-                <div class="hide" id="read-books-2020">
+                <div class="hide span-end" id="read-books-2020">
                     <ul id="app-2020-root">
                         <li class="grid book-list">
-                            <p class="bold">Title (review link)</p>
-                            <p class="bold">Author</p>
-                            <p class="bold">Pages</p>
-                            <p class="bold">Score</p>
-                            <p class="bold">Add to TBR</p>
+                            <p class="medium-text">Title (review link)</p>
+                            <p class="medium-text">Author</p>
+                            <p class="medium-text">Pages</p>
+                            <p class="medium-text">Score</p>
+                            <p class="medium-text">Add to TBR</p>
                         </li>
                     </ul>
                 </div>
             </section>
-        </section>
+            <article class="currently-reading margin-1">
+                <h2 class="page-title">Currently reading</h2>
+                <div id="current-read-root" class="flex column center"></div>
+            </article>
+        </div>
+
     </main>
     <footer>
-        <p>Footer things will be here</p>
+        <p class="medium-text">Footer things</p>
     </footer>
 </body>
 

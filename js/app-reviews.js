@@ -84,10 +84,12 @@ fetch("./content/books.json", {})
           tbrs.forEach((item) => {
             if (item.id === book.id) {
               bookAlreadyAdded = true;
+              addToTbr.innerText = "Already added";
             }
           });
           if (!bookAlreadyAdded) {
             tbrs.push(book);
+            addToTbr.innerText = "Added";
             saveList();
           }
         });

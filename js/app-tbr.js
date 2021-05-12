@@ -28,14 +28,26 @@ function createUserTbr(items) {
   let list = document.createElement("ul");
   items.forEach((item) => {
     let listItem = document.createElement("li");
+    listItem.classList.add("grid", "your-tbr-list")
     let title = createItem("p", item.title);
     let author = createItem("p", item.author);
+    let library;
+    if (item.library[0]) {
+      library = createItem("a", "Stockholm");
+      library.setAttribute("href", item.library[1]);
+    } else {
+      library = createItem("p", "Library Not available");
+    }
+    library.classList.add("button-text");
+    let purchase = createItem("a", item.store[0]);
+    purchase.setAttribute("href", item.store[1]);
+    purchase.classList.add("button-text");
     let removeButton = createItem("button", "REMOVE");
     removeButton.addEventListener("click", () => {
       tbrs = tbrs.filter((thing) => thing.id !== item.id);
       updateList();
     });
-    listItem.append(title, author, removeButton);
+    listItem.append(title, author, purchase, library, removeButton);
     list.append(listItem);
   });
   return list;
@@ -51,20 +63,23 @@ fetch("./content/books.json", {})
     data.forEach((book) => {
       if (!book.read) {
         let listItem = document.createElement("li");
-        listItem.classList.add("grid", "tbr-list");
+        listItem.classList.add("grid", "my-tbr-list");
         let title = createItem("p", book.title);
         let author = createItem("p", book.author);
         let status = createItem("p", book.status);
         let addToTbr = createItem("button", "+");
+        addToTbr.classList.add("button-text");
         addToTbr.addEventListener("click", () => {
           let bookAlreadyAdded = false;
           tbrs.forEach((item) => {
             if (item.id === book.id) {
               bookAlreadyAdded = true;
+              addToTbr.innerText = "already added";
             }
           });
           if (!bookAlreadyAdded) {
             tbrs.push(book);
+            addToTbr.innerText = "Added";
             updateList();
           }
         });

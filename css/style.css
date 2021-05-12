@@ -10,6 +10,19 @@ font-family: 'Alegreya Sans', sans-serif;
   padding: 0;
   box-sizing: border-box;
   font-size: 18px;
+  list-style: none;
+}
+
+.margin-1 {
+  margin: 1rem;
+}
+
+.margin-left {
+  margin-left: 1rem;
+}
+
+.margin-not-top {
+  margin: 0 1rem 1rem 1rem;
 }
 
 :root {
@@ -32,6 +45,10 @@ a:hover {
   text-decoration: underline;
 }
 
+.hide {
+  display: none;
+}
+
 .grid {
   display: grid;
 }
@@ -44,8 +61,21 @@ a:hover {
   justify-content: space-around;
 }
 
+.between {
+  justify-content: space-between;
+}
+
 .column {
   flex-direction: column;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.start {
+  align-items: flex-start;
 }
 
 .title {
@@ -92,8 +122,24 @@ a:hover {
 }
 
 header,
-.review {
+.review{
   grid-template-columns: auto 1fr;
+}
+
+.read-books {
+  grid-template-columns: auto auto 1fr;
+}
+
+.first-page {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.my-tbr-list {
+  grid-template-columns: 3fr 2fr 2fr 1fr;
+}
+
+.your-tbr-list {
+  grid-template-columns: repeat(4, 2fr) 1fr;
 }
 
 .reviews-main {
@@ -112,7 +158,10 @@ header,
   max-width: 200px;
 }
 
-.review button {
+.review button,
+.book-list button,
+.my-tbr-list button,
+.your-tbr-list button {
   max-width: 50vw;
   border-radius: 2px;
   border: 0.25rem solid var(--orange);
@@ -120,16 +169,49 @@ header,
   color: var(--orange);
 }
 
+.book-list button:hover,
+.my-tbr-list button:hover,
+.your-tbr-list button:hover {
+  border-color: white;
+  background-color: var(--orange);
+  color: white;
+}
+
 .review-text {
   margin: 1rem 0 0.5rem 0;
 }
 
+.book-list {
+  grid-template-columns: 3fr 2fr 1fr 1fr 1fr;
+}
+
+.currently-reading {
+  place-self: center;
+}
+
+.read-books {
+  margin: 1rem;
+}
+
+.year-btn {
+  align-self: end;
+  margin: 0 2rem 1rem 0;
+}
+
 .span-end {
-  grid-column: 1 / end;
+  grid-column: 1 / -1;
 }
 
 .span-2 {
   grid-column: span 2;
+}
+
+.span-2-row {
+  grid-row: span 2;
+}
+
+.span-3 {
+  grid-column: span 3;
 }
 
 .page-logo {
@@ -153,10 +235,14 @@ nav {
   margin-left: 10vw;
 }
 
+.change-color {
+  background-color: var(--orange);
+  color: var(--almost-white);
+}
+
 .border-thing {
   position: relative;
   margin: 2vw;
-  width: 470px;
 }
 
 .border-thing h1 {
@@ -200,13 +286,14 @@ nav {
     font-size: 12px;
   }
 
-  p {
+  p,
+  a {
     font-size: 1.5rem;
   }
- 
-.reviews-main {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
+
+  .reviews-main {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 
   .review img {
     grid-row: 1 / 8;
