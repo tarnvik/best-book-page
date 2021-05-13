@@ -159,6 +159,10 @@ header,
   max-width: 200px;
 }
 
+.first-page img {
+  width: 200px;
+}
+
 .review button,
 .book-list button,
 .my-tbr-list button,

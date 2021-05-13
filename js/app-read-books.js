@@ -53,7 +53,7 @@ function createListItem(book) {
     tbrs.forEach((item) => {
       if (item.id === book.id) {
         bookAlreadyAdded = true;
-        addToTbr.innerText = "Added";
+        addToTbr.innerText = "Already added";
       }
     });
     if (!bookAlreadyAdded) {
