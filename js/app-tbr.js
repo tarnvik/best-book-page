@@ -28,9 +28,11 @@ function createUserTbr(items) {
   let list = document.createElement("ul");
   items.forEach((item) => {
     let listItem = document.createElement("li");
-    listItem.classList.add("grid", "your-tbr-list")
+    listItem.classList.add("grid", "your-tbr-list");
     let title = createItem("p", item.title);
+    title.classList.add("book-title");
     let author = createItem("p", item.author);
+    author.classList.add("author");
     let library;
     if (item.library[0]) {
       library = createItem("a", "Stockholm");
@@ -46,6 +48,7 @@ function createUserTbr(items) {
     removeButton.addEventListener("click", () => {
       tbrs = tbrs.filter((thing) => thing.id !== item.id);
       updateList();
+      updateButton(item.id);
     });
     listItem.append(title, author, purchase, library, removeButton);
     list.append(listItem);
@@ -65,7 +68,9 @@ fetch("./content/books.json", {})
         let listItem = document.createElement("li");
         listItem.classList.add("grid", "my-tbr-list");
         let title = createItem("p", book.title);
+        title.classList.add("book-title");
         let author = createItem("p", book.author);
+        author.classList.add("author");
         let status = createItem("p", book.status);
         let addToTbr = createItem("button", "+");
         addToTbr.classList.add("button-text");
